@@ -8,11 +8,11 @@ import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
 import java.util.ArrayList;
-
+//<!--   done by Shufang-->
 public class DailyAdapter extends ArrayAdapter<DailyCA> {
 
-    private ArrayList<DailyCA> dailyCA;
-    private Context context;
+    private final ArrayList<DailyCA> dailyCA;
+    private final Context context;
 
 
     public DailyAdapter(Context context, int resource, ArrayList<DailyCA> objects) {
@@ -30,9 +30,9 @@ public class DailyAdapter extends ArrayAdapter<DailyCA> {
         TextView tvWeekNumber = rowView.findViewById(R.id.tvWeekNumber);
         TextView tvDGLetter = rowView.findViewById(R.id.tvDGLetter);
 
-        DailyCA currentCA = dailyCA.get(position);
+        DailyCA currentCAPosition = dailyCA.get(position);
         tvWeekNumber.setText("Week: " + (position + 1));
-        tvDGLetter.setText(currentCA.getDgGrade());
+        tvDGLetter.setText(currentCAPosition.getDgGrade());
 
         return rowView;
     }

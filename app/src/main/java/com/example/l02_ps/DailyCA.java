@@ -1,7 +1,7 @@
 package com.example.l02_ps;
 
 import java.io.Serializable;
-
+//<!--   done by Shufang-->
 public class DailyCA implements Serializable {
 
     private String dgGrade;
