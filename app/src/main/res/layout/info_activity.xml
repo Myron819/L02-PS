@@ -1,39 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
 
+
+    <!--Daily Grade ListView-->
     <ListView
-        android:id="@+id/lvDaily"
+        android:id="@+id/lvDG"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1" />
 
+    <!--LinearLayout 1-->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:padding="10dp"
         android:orientation="horizontal">
 
+        <!--Info Button-->
         <Button
             android:id="@+id/btnInfo"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Info" />
+            android:text="@string/info" />
 
+        <!--Add Week Button-->
         <Button
             android:id="@+id/btnAddWeek"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Add" />
+            android:text="@string/add" />
 
+        <!--Email Button-->
         <Button
             android:id="@+id/btnEmail"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Email Faci" />
+            android:text="@string/email_faci" />
 
     </LinearLayout>
+    <!--END LinearLayout 1-->
+
+</LinearLayout>

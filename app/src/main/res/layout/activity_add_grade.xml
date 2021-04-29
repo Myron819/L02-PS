@@ -2,84 +2,101 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="10dp">
 
+
+    <!--Week Number TextView-->
     <TextView
-        android:id="@+id/textViewWeek"
+        android:id="@+id/tvWeekNumber"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="TextView" />
+        android:text="@string/c000"
+        android:textColor="@color/black" />
 
+    <!--LinearLayout 1-->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="horizontal">
 
+        <!--book ImageView-->
         <ImageView
             android:id="@+id/imageView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:srcCompat="@drawable/dg" />
 
+        <!--LinearLayout 2-->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/textViewDG"
-                android:layout_width="wrap_content"
+                android:id="@+id/tvDG"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="DG" />
+                android:layout_weight="1"
+                android:text="@string/dg" />
 
-            <LinearLayout
+            <RadioGroup
+                android:id="@+id/rgDG"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_weight="1"
                 android:orientation="horizontal">
 
                 <RadioButton
-                    android:id="@+id/radioButtonA"
+                    android:id="@+id/rbGradeA"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="A" />
+                    android:layout_weight="1"
+                    android:text="@string/a" />
 
                 <RadioButton
-                    android:id="@+id/radioButtonB"
+                    android:id="@+id/rbGradeB"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="B" />
+                    android:layout_weight="1"
+                    android:text="@string/b" />
 
                 <RadioButton
-                    android:id="@+id/radioButtonC"
+                    android:id="@+id/rbGradeC"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="C" />
+                    android:layout_weight="1"
+                    android:text="@string/c" />
 
                 <RadioButton
-                    android:id="@+id/radioButtonD"
+                    android:id="@+id/rbGradeD"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="D" />
+                    android:layout_weight="1"
+                    android:text="@string/d" />
 
                 <RadioButton
-                    android:id="@+id/radioButtonF"
+                    android:id="@+id/rbGradeF"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="F" />
+                    android:layout_weight="1"
+                    android:text="@string/f" />
 
                 <RadioButton
-                    android:id="@+id/radioButtonX"
+                    android:id="@+id/rbGradeX"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="X" />
-            </LinearLayout>
+                    android:layout_weight="1"
+                    android:text="@string/x" />
+            </RadioGroup>
 
         </LinearLayout>
+
     </LinearLayout>
 
     <Button
-        android:id="@+id/buttonSubmit"
+        android:id="@+id/btnSubmit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Submit" />
