@@ -24,7 +24,7 @@ public class AddActivity extends AppCompatActivity {
         Button btnSubmit = findViewById(R.id.btnSubmit);
 
         Intent i1 = getIntent();
-        int weekNumber = i1.getIntExtra("tempWeekNumber", 0) + 1;
+        int weekNumber = i1.getIntExtra("weekNumber", 0) + 1;
 
         tvWeekNumber.setText("Week " + (weekNumber));
 
