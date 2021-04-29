@@ -63,6 +63,7 @@ public class ActivityInfo  extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
+
             }
         });
     }
