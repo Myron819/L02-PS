@@ -7,10 +7,13 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.RadioButton;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 public class ActivityInfo  extends AppCompatActivity {
+    int requestCodeForGrade = 1;
     Button btnInfo, btnAddWeek, btnEmail;
     ListView lv;
 
@@ -62,9 +65,35 @@ public class ActivityInfo  extends AppCompatActivity {
         btnAddWeek.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Grade add = new Grade(RadioButton);
 
+                Intent i = new Intent(ActivityInfo.this, ActivityAddGrade.class);
+                i.putExtra("grade", add);
+
+                startActivityForResult(i, requestCodeForGrade);
 
             }
         });
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode,
+                                    int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        // Only handle when 2nd activity closed normally
+        //  and data contains something
+        if(resultCode == RESULT_OK){
+            if (data != null) {
+                // Get data passed back from 2nd activity
+                String dg = data.getStringExtra("dg");
+                String gradeUpdate = "";
+                // If it is activity started by clicking 				//  Superman, create corresponding String
+                if(requestCode == requestCodeForGrade){
+                    gradeUpdate = dg;
+                }
+
+            }
+        }
     }
 }
